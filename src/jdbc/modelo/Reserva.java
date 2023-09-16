@@ -5,16 +5,24 @@ import java.util.Date;
 
 public class Reserva {
     private Integer id;
-    private Date data_entrada;
-    private Date data_saida;
+    private Date dataEntrada;
+    private Date dataSaida;
     private BigDecimal valor;
-    private String forma_pagamento;
+    private String formaPagamento;
     
-    public Reserva(Date data_entrada, Date data_saida, BigDecimal valor, String forma_pagamento) {
-        this.data_entrada = data_entrada;
-        this.data_saida = data_saida;
+    public Reserva(Date dataEntrada, Date dataSaida, BigDecimal valor, String formaPagamento) {
+        this.dataEntrada = dataEntrada;
+        this.dataSaida = dataSaida;
         this.valor = valor;
-        this.forma_pagamento = forma_pagamento;
+        this.formaPagamento = formaPagamento;
+    }
+    
+    public Reserva(Integer id, Date dataEntrada, Date dataSaida, BigDecimal valor, String formaPagamento) {
+        this.id = id;
+        this.dataEntrada = dataEntrada;
+        this.dataSaida = dataSaida;
+        this.valor = valor;
+        this.formaPagamento = formaPagamento;
     }
 
     /**
@@ -25,31 +33,38 @@ public class Reserva {
     }
 
     /**
-     * @return Date return the data_entrada
+     * @param id the id to set
      */
-    public Date getData_entrada() {
-        return data_entrada;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     /**
-     * @param data_entrada the data_entrada to set
+     * @return Date return the data_entrada
      */
-    public void setData_entrada(Date data_entrada) {
-        this.data_entrada = data_entrada;
+    public Date getDataEntrada() {
+        return dataEntrada;
+    }
+
+    /**
+     * @param dataEntrada the data_entrada to set
+     */
+    public void setDataEntrada(Date dataEntrada) {
+        this.dataEntrada = dataEntrada;
     }
 
     /**
      * @return Date return the data_saida
      */
-    public Date getData_saida() {
-        return data_saida;
+    public Date getDataSaida() {
+        return dataSaida;
     }
 
     /**
-     * @param data_saida the data_saida to set
+     * @param dataSaida the data_saida to set
      */
-    public void setData_saida(Date data_saida) {
-        this.data_saida = data_saida;
+    public void setDataSaida(Date dataSaida) {
+        this.dataSaida = dataSaida;
     }
 
     /**
@@ -69,15 +84,15 @@ public class Reserva {
     /**
      * @return String return the forma_pagamento
      */
-    public String getForma_pagamento() {
-        return forma_pagamento;
+    public String getFormaPagamento() {
+        return formaPagamento;
     }
 
     /**
-     * @param forma_pagamento the forma_pagamento to set
+     * @param formaPagamento the forma_pagamento to set
      */
-    public void setForma_pagamento(String forma_pagamento) {
-        this.forma_pagamento = forma_pagamento;
+    public void setFormaPagamento(String formaPagamento) {
+        this.formaPagamento = formaPagamento;
     }
 
 }
