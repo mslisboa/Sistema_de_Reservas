@@ -1,4 +1,4 @@
-package jdb.factory;
+package model;
 
 import java.sql.Connection;
 

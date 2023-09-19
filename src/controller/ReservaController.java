@@ -1,12 +1,12 @@
-package jdbc.controller;
+package controller;
 
 import java.sql.Connection;
 import java.sql.Date;
 import java.util.List;
 
-import jdb.factory.ConnectionFactory;
-import jdbc.dao.ReservaDao;
-import jdbc.modelo.Reserva;
+import model.ConnectionFactory;
+import model.dao.ReservaDao;
+import model.entity.Reserva;
 
 public class ReservaController {
     private ReservaDao reservaDao;

@@ -1,4 +1,4 @@
-package views;
+package view.views;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -47,7 +47,7 @@ public class MenuPrincipal extends JFrame {
 	 * Create the frame.
 	 */
 	public MenuPrincipal() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(MenuPrincipal.class.getResource("/imagenes/aH-40px.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(MenuPrincipal.class.getResource("/view/imagenes/aH-40px.png")));
 		setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
 		setBounds(100, 100, 910, 537);
 		contentPane = new JPanel();
@@ -67,12 +67,12 @@ public class MenuPrincipal extends JFrame {
 		
 		JLabel imagenFondo = new JLabel("");
 		imagenFondo.setBounds(-50, 0, 732, 501);
-		imagenFondo.setIcon(new ImageIcon(MenuPrincipal.class.getResource("/imagenes/menu-img.png")));
+		imagenFondo.setIcon(new ImageIcon(MenuPrincipal.class.getResource("/view/imagenes/menu-img.png")));
 		panel.add(imagenFondo);
 		
 		JLabel Logo = new JLabel("");
 		Logo.setBounds(722, 80, 150, 156);
-		Logo.setIcon(new ImageIcon(MenuPrincipal.class.getResource("/imagenes/aH-150px.png")));
+		Logo.setIcon(new ImageIcon(MenuPrincipal.class.getResource("/view/imagenes/aH-150px.png")));
 		panel.add(Logo);
 		
 		JPanel panel_1 = new JPanel();
@@ -154,7 +154,7 @@ public class MenuPrincipal extends JFrame {
 		lblLogin.setBounds(0, 0, 80, 70);
 		btnLogin.add(lblLogin);
 		lblLogin.setHorizontalAlignment(SwingConstants.CENTER);
-		lblLogin.setIcon(new ImageIcon(MenuPrincipal.class.getResource("/imagenes/login.png")));
+		lblLogin.setIcon(new ImageIcon(MenuPrincipal.class.getResource("/view/imagenes/login.png")));
 		
 		JLabel lblTitulo = new JLabel("LOGIN");
 		lblTitulo.setBounds(754, 265, 83, 24);

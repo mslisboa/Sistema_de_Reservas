@@ -1,4 +1,4 @@
-package jdbc.dao;
+package model.dao;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -8,7 +8,8 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-import jdbc.modelo.Reserva;
+
+import model.entity.Reserva;
 
 public class ReservaDao {
 	

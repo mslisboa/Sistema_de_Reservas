@@ -1,4 +1,4 @@
-package views;
+package view.views;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -11,8 +11,9 @@ import javax.swing.ImageIcon;
 import java.awt.Color;
 import javax.swing.JTextField;
 import com.toedter.calendar.JDateChooser;
-import jdbc.controller.ReservaController;
-import jdbc.modelo.Reserva;
+
+import controller.ReservaController;
+import model.entity.Reserva;
 
 import java.awt.Font;
 import javax.swing.JComboBox;
@@ -70,7 +71,7 @@ public class ReservasView extends JFrame {
 		super("Reserva");
 		this.reservaController = new ReservaController();
 
-		setIconImage(Toolkit.getDefaultToolkit().getImage(ReservasView.class.getResource("/imagenes/aH-40px.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(ReservasView.class.getResource("/view/imagenes/aH-40px.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 910, 560);
 		setResizable(false);
@@ -113,7 +114,7 @@ public class ReservasView extends JFrame {
 		
 		txtDataE = new JDateChooser();
 		txtDataE.getCalendarButton().setBackground(SystemColor.textHighlight);
-		txtDataE.getCalendarButton().setIcon(new ImageIcon(ReservasView.class.getResource("/imagenes/icon-reservas.png")));
+		txtDataE.getCalendarButton().setIcon(new ImageIcon(ReservasView.class.getResource("/view/imagenes/icon-reservas.png")));
 		txtDataE.getCalendarButton().setFont(new Font("Roboto", Font.PLAIN, 12));
 		txtDataE.setBounds(68, 161, 289, 35);
 		txtDataE.getCalendarButton().setBounds(268, 0, 21, 33);
@@ -143,7 +144,7 @@ public class ReservasView extends JFrame {
 		panel.add(lblCheckOut);
 		
 		txtDataS = new JDateChooser();
-		txtDataS.getCalendarButton().setIcon(new ImageIcon(ReservasView.class.getResource("/imagenes/icon-reservas.png")));
+		txtDataS.getCalendarButton().setIcon(new ImageIcon(ReservasView.class.getResource("/view/imagenes/icon-reservas.png")));
 		txtDataS.getCalendarButton().setFont(new Font("Roboto", Font.PLAIN, 11));
 		txtDataS.setBounds(68, 246, 289, 35);
 		txtDataS.getCalendarButton().setBounds(267, 1, 21, 31);
@@ -208,13 +209,13 @@ public class ReservasView extends JFrame {
 		JLabel logo = new JLabel("");
 		logo.setBounds(197, 68, 104, 107);
 		panel_1.add(logo);
-		logo.setIcon(new ImageIcon(ReservasView.class.getResource("/imagenes/Ha-100px.png")));
+		logo.setIcon(new ImageIcon(ReservasView.class.getResource("/view/imagenes/Ha-100px.png")));
 		
 		JLabel imagemFundo = new JLabel("");
 		imagemFundo.setBounds(0, 140, 500, 409);
 		panel_1.add(imagemFundo);
 		imagemFundo.setBackground(Color.WHITE);
-		imagemFundo.setIcon(new ImageIcon(ReservasView.class.getResource("/imagenes/reservas-img-3.png")));
+		imagemFundo.setIcon(new ImageIcon(ReservasView.class.getResource("/view/imagenes/reservas-img-3.png")));
 		
 		JPanel btnexit = new JPanel();
 		btnexit.addMouseListener(new MouseAdapter() {

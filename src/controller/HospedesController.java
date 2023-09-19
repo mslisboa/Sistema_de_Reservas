@@ -1,12 +1,12 @@
-package jdbc.controller;
+package controller;
 
 import java.sql.Connection;
 import java.sql.Date;
 import java.util.List;
 
-import jdb.factory.ConnectionFactory;
-import jdbc.dao.HospedesDao;
-import jdbc.modelo.Hospedes;
+import model.ConnectionFactory;
+import model.dao.HospedesDao;
+import model.entity.Hospedes;
 
 public class HospedesController {
     private HospedesDao hospedesDao;

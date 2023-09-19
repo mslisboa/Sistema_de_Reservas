@@ -1,4 +1,4 @@
-package jdbc.dao;
+package model.dao;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -9,7 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import jdbc.modelo.Hospedes;
+import model.entity.Hospedes;
 
 public class HospedesDao {
     private Connection connection;

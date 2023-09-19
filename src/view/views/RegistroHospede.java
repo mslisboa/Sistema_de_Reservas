@@ -1,4 +1,4 @@
-package views;
+package view.views;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -8,10 +8,10 @@ import javax.swing.JTextField;
 import java.awt.Color;
 import com.toedter.calendar.JDateChooser;
 
-import jdbc.controller.HospedesController;
-import jdbc.controller.ReservaController;
-import jdbc.modelo.Hospedes;
-import jdbc.modelo.Reserva;
+import controller.HospedesController;
+import controller.ReservaController;
+import model.entity.Hospedes;
+import model.entity.Reserva;
 
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
@@ -68,7 +68,7 @@ public class RegistroHospede extends JFrame {
 		this.reservasController = new ReservaController();
 		
 		
-		setIconImage(Toolkit.getDefaultToolkit().getImage(RegistroHospede.class.getResource("/imagenes/lOGO-50PX.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(RegistroHospede.class.getResource("/view/imagenes/lOGO-50PX.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 910, 634);
 		contentPane = new JPanel();
@@ -137,7 +137,7 @@ public class RegistroHospede extends JFrame {
 		
 		txtDataN = new JDateChooser();
 		txtDataN.setBounds(560, 278, 285, 36);
-		txtDataN.getCalendarButton().setIcon(new ImageIcon(RegistroHospede.class.getResource("/imagenes/icon-reservas.png")));
+		txtDataN.getCalendarButton().setIcon(new ImageIcon(RegistroHospede.class.getResource("/view/imagenes/icon-reservas.png")));
 		txtDataN.getCalendarButton().setBackground(SystemColor.textHighlight);
 		txtDataN.setDateFormatString("yyyy-MM-dd");
 		contentPane.add(txtDataN);
@@ -279,12 +279,12 @@ public class RegistroHospede extends JFrame {
 		JLabel imagemFundo = new JLabel("");
 		imagemFundo.setBounds(0, 121, 479, 502);
 		panel.add(imagemFundo);
-		imagemFundo.setIcon(new ImageIcon(RegistroHospede.class.getResource("/imagenes/registro.png")));
+		imagemFundo.setIcon(new ImageIcon(RegistroHospede.class.getResource("/view/imagenes/registro.png")));
 		
 		JLabel logo = new JLabel("");
 		logo.setBounds(194, 39, 104, 107);
 		panel.add(logo);
-		logo.setIcon(new ImageIcon(RegistroHospede.class.getResource("/imagenes/Ha-100px.png")));
+		logo.setIcon(new ImageIcon(RegistroHospede.class.getResource("/view/imagenes/Ha-100px.png")));
 		
 		JPanel btnexit = new JPanel();
 		btnexit.setBounds(857, 0, 53, 36);

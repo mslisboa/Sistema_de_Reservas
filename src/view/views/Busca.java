@@ -1,4 +1,4 @@
-package views;
+package view.views;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -6,10 +6,11 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
-import jdbc.controller.HospedesController;
-import jdbc.controller.ReservaController;
-import jdbc.modelo.Hospedes;
-import jdbc.modelo.Reserva;
+import controller.HospedesController;
+import controller.ReservaController;
+import model.entity.Hospedes;
+import model.entity.Reserva;
+
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.ImageIcon;
@@ -69,7 +70,7 @@ public class Busca extends JFrame {
 	public Busca() {
 		this.reservaController = new ReservaController();
 		this.hospedesController = new HospedesController();
-		setIconImage(Toolkit.getDefaultToolkit().getImage(Busca.class.getResource("/imagenes/lupa2.png")));
+		setIconImage(Toolkit.getDefaultToolkit().getImage(Busca.class.getResource("/view/imagenes/lupa2.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 910, 571);
 		contentPane = new JPanel();
@@ -106,7 +107,7 @@ public class Busca extends JFrame {
 
 		tbHospedes = new JTable();
 		tbHospedes.setFont(new Font("Roboto", Font.PLAIN, 16));
-		panel.addTab("Hóspedes", new ImageIcon(Busca.class.getResource("/imagenes/pessoas.png")), tbHospedes, null);
+		panel.addTab("Hóspedes", new ImageIcon(Busca.class.getResource("/view/imagenes/pessoas.png")), tbHospedes, null);
 		modeloHospede = (DefaultTableModel) tbHospedes.getModel();
 		modeloHospede.addColumn("Numero de Hóspede");
 		modeloHospede.addColumn("Nome");
@@ -122,7 +123,7 @@ public class Busca extends JFrame {
 		
 		tbReservas = new JTable();
 		tbReservas.setFont(new Font("Roboto", Font.PLAIN, 16));
-		panel.addTab("Reservas", new ImageIcon(Busca.class.getResource("/imagenes/reservado.png")), tbReservas, null);
+		panel.addTab("Reservas", new ImageIcon(Busca.class.getResource("/view/imagenes/reservado.png")), tbReservas, null);
 		modelo = (DefaultTableModel) tbReservas.getModel();
 		modelo.addColumn("Numero de Reserva");
 		modelo.addColumn("Data Check In");
@@ -135,7 +136,7 @@ public class Busca extends JFrame {
 		
 		JLabel logo = new JLabel("");
 		logo.setBounds(56, 51, 104, 107);
-		logo.setIcon(new ImageIcon(Busca.class.getResource("/imagenes/Ha-100px.png")));
+		logo.setIcon(new ImageIcon(Busca.class.getResource("/view/imagenes/Ha-100px.png")));
 		contentPane.add(logo);
 		
 		JPanel header = new JPanel();
